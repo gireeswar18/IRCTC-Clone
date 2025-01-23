@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import trainSrc from "../assets/train_src.svg";
 import trainDest from "../assets/train_dest.svg";
 import ticket from "../assets/invoice.png";
+import cal from "../assets/cal.svg";
 
 const Search = () => {
   const [isSearchTrain, setIsSearchTrain] = useState(true);
@@ -71,12 +72,21 @@ const Search = () => {
                   placeholder="To"
                 />
               </div>
-              <div className="flex-1 flex rounded-r-xl bg-white">
+              <div className="flex-1 flex rounded-r-xl bg-white ">
+                <img
+                  src={cal}
+                  alt="dest"
+                  height={24}
+                  width={24}
+                  className="mx-4"
+                />
                 <input
-                  type="date"
-                  className="w-full h-full py-6 rounded-r-xl px-4 text-black outline-none"
+                  type="text"
+                  className="w-full h-full py-6 rounded-r-xl text-black px-4 outline-none"
+                  placeholder="Journey Date"
                 />
               </div>
+              
             </div>
           </div>
           {/* Resp */}
@@ -110,9 +120,17 @@ const Search = () => {
               />
             </div>
             <div className="rounded-xl flex bg-white">
+            <img
+                src={cal}
+                alt="to"
+                height={24}
+                width={24}
+                className="mx-4"
+              />
               <input
-                type="date"
+                type="text"
                 className="w-full h-full py-6 rounded-xl text-black px-4 outline-none text-lg"
+                placeholder="Journey Date"
               />
             </div>
           </div>
